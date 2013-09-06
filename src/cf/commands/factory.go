@@ -143,3 +143,10 @@ func (f Factory) NewMarketplaceServices() MarketplaceServices {
 		f.repoLocator.GetServiceRepository(),
 	)
 }
+
+func (f Factory) NewPassword() Password {
+	return NewPassword(
+		f.ui,
+		f.repoLocator.GetPasswordRepository(),
+	)
+}
